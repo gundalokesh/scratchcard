@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color:#232323;
+   
+}
+.scratch img{
+    width: 250px;
+    height: 250px;
+    
+}
+span{
+ 
+    color: white;
+    margin-right: 340px;
+
+}
+
+
+
+
+.container
+{
+ text-align: center;
+ 
+}
+.scratch{
+    margin-top: 40px;
+}
+
+.discription{
+    color:white;
+    font-size: 10px;
+}
+.button{
+    margin-top: 100px;
+}
+.pair p{
+    margin: 0px;
+}
+.btn{
+
+    border-radius: 20px;
+}
+.button button{
+    font-size: 10px;
+    width: 150px;
+    
+ }
+
+@media only screen and (min-width: 768px) and (max-width : 1024px){
+    .scratch img{
+        width: 200px;
+        height: 200px;
+        
+    }
+    .discription{
+        margin-top: 30px;
+        font-size: 8px;
+    }
+  }
+ @media only screen and (min-width: 320px) and (max-width :768px){
+    .scratch img{
+        width: 150px;
+        height: 150px;
+        
+    } 
+    .discription{
+        color:white;
+        font-size:7px;
+
+        
+    }
+    .discription p{
+        margin-top: 5px;
+    }
+
+
+    .container{
+        margin-top: 40px;
+       
+    }
+    span{
+        margin-right: 200px;
+        
+        
+    }
+    .button button{
+        font-size: 5px;
+        width: 80px;
+        
+     }
+  }
