@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pricemoney {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid gray;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skrach {
+  z-index: 2;
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: grabbing;
+}
+
+.surprice {
+  -webkit-user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
+
+  background-color: gold;
+  width: 150px;
+  height: 150px;
+  border-radius: 30px 60px;
+  text-align: center;
+}
+.surprice h3 {
+  font-size: 1.5rem;
+  color: green;
+}
+.surprice img {
+  width: 100px;
+}
+
