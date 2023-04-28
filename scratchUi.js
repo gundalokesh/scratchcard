@@ -6,42 +6,39 @@ const totalPixels = canvasWidth * canvasHeight;
 let screenBlue = new Image();
 screenBlue.src = "./Screenshot 2023-04-25 191032.png";
 
-
 scrach.addEventListener("mousemove", function (e) {
   e.preventDefault();
   if (e.which === 1) {
     let x = e.offsetX;
     let y = e.offsetY;
 
-    let emptyPixels = getEmptyPixelsCount();
-    if (emptyPixels <= totalPixels / 2) {
+    let nonEmptyPixels = getNonEmptyPixelsCount();
+    console.log(nonEmptyPixels);
+    if (nonEmptyPixels <= totalPixels / 2) {
+      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+      scrach.style.display = "none";
+    } else {
       ctx.beginPath();
       ctx.globalCompositeOperation = "destination-out";
       ctx.arc(x, y, 30, 0, 360, false);
       ctx.fill();
-    } else {
-      ctx.clearRect(0,0,canvasWidth,canvasHeight);
-      scrach.style.display = "none";
     }
   }
 });
 
-
-function getEmptyPixelsCount(){
-  let imgdata=ctx.getImageData(0 , 0 ,canvasWidth , canvasHeight).data;
+function getNonEmptyPixelsCount() {
+  let imgdata = ctx.getImageData(0, 0, canvasWidth, canvasHeight).data;
   let count = 0;
   if (imgdata) {
-      for (let index = 3; index < imgdata.length; index += 4) {
-          if (imgdata[index] === 255) {
-            count += 1;
-          }
+    for (let index = 3; index < imgdata.length; index += 4) {
+      if (imgdata[index] === 255) {
+        count += 1;
       }
-  };
+    }
+  }
 
   return count;
-
 }
-
 
 screenBlue.onload = function init() {
   ctx.drawImage(screenBlue, 0, 0, 200, 200);
@@ -59,6 +56,3 @@ function ontouchmove(e) {
   ctx.arc(x, y, 30, 0, 360, false);
   ctx.fill();
 }
-
-
-
