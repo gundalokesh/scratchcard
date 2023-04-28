@@ -2,17 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
-
+body
+{
+ 
+  background: #323131;
+}
 .pricemoney {
   width: 200px;
   height: 200px;
   position: relative;
   margin: 0 auto;
   border: 1px solid gray;
+  background-color: rgb(245, 227, 126);
   overflow: hidden;
   display: flex;
   justify-content: center;
+  top: 50px;
   align-items: center;
 }
 #skrach {
@@ -30,10 +37,9 @@
   -webkit-user-select: none; 
   -ms-user-select: none;
   user-select: none;
-
-  background-color: gold;
-  width: 150px;
-  height: 150px;
+  background-color: #fff;
+  width: 180px;
+  height: 180px;
   border-radius: 30px 60px;
   text-align: center;
 }
@@ -44,4 +50,42 @@
 .surprice img {
   width: 100px;
 }
+button ,.details{
+ 
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  
+  color: white;
+  
 
+}
+button{
+  background-color:#1373E7;
+  border: 1px solid #1373E7;
+}
+.btn{
+position: absolute;
+bottom: 15%;
+left: 50%;
+transform: translate( -50% , 50%);
+ 
+
+}
+.details{
+  -webkit-user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%,50%);
+  font-size: 11px;
+  text-align: center;
+
+}
+.horry{
+  margin-bottom: 32px;
+  font-size: 20px;
+  
+}
